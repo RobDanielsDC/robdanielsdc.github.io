@@ -196,6 +196,8 @@ a{
 
     .container{
         flex-direction: column-reverse;
+        height: 96vh;
+
     }
 
     .nav-container {
