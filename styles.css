@@ -10,10 +10,7 @@
     --ff-primary: "forma-djr-text", sans-serif;
     --ff-accent: "freight-display-pro", serif;
 
-    --app-height: 100%;
-
-
-    font-size: clamp(16px, 1vw, 20px)
+    font-size: clamp(16px, 1vw, 20px);
 
 }
 
@@ -92,8 +89,7 @@ p {
 
 .container {
     margin: 0 auto;
-    height: 96vh;
-    height: 96%;
+    height: 92vh;
     width: 90vw;
     display: flex;
     flex-direction: column;
