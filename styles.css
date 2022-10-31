@@ -10,6 +10,11 @@
     --ff-primary: "forma-djr-text", sans-serif;
     --ff-accent: "freight-display-pro", serif;
 
+    --app-height: 100%;
+
+
+    font-size: clamp(16px, 1vw, 20px)
+
 }
 
 
@@ -28,6 +33,7 @@ p {
   margin: 0;
 }
 
+
 .vignette {
     position: fixed;
     height: 100vh;
@@ -38,6 +44,7 @@ p {
 }
   
 .bg-clouds-static {
+    position: fixed;
     background-image: url("images/bg-clouds.jpg");
     background-size: cover;
     opacity: .8;
@@ -79,9 +86,14 @@ p {
   }
 
 
+
+
+
+
 .container {
     margin: 0 auto;
     height: 96vh;
+    height: 96%;
     width: 90vw;
     display: flex;
     flex-direction: column;
@@ -101,6 +113,7 @@ h1 {
     font-family: var(--ff-accent);
     font-weight: 500;
     font-size: 5.5rem;
+    font-size: clamp(5.5rem, 10vw, 10.5rem);
     line-height: .75;
 
 }
@@ -108,12 +121,17 @@ h1 {
 p {
     font-family: var(--ff-primary);  
     font-weight: 500;
-    font-size: .72em;
+    font-size: .72rem;
     letter-spacing: .04rem;
     line-height: 1.2;
 
 }
 
+.hero-p {
+    margin: 1.2em 0;
+    font-size: 1.55rem;
+    width: 92%;
+}
 
 .nav-container {
     display: flex;
@@ -147,12 +165,6 @@ a{
 
 }
 
-.hero-p {
-    margin: 1.2em 0;
-    font-size: 1.55em;
-    width: 92%;
-}
-
 .bird-icon {
     width: .4em;
     margin: 0 -.15em;
@@ -178,7 +190,7 @@ a{
 
 
 
-@media (min-width: 1200px) {
+@media (min-width: 940px) {
 
     a:hover {
         opacity: .7;
@@ -199,7 +211,7 @@ a{
     }
 
     .circle-btn {
-        position: fixed;
+        position: absolute;
         right: 5vw; bottom: 2vh;
     }
 
@@ -213,7 +225,6 @@ a{
 
     h1 {
 
-        font-size: 11.5em;
         line-height: .75;
         margin-bottom: .5rem;
     }
@@ -221,7 +232,6 @@ a{
     .hero-p {
         max-width: 18.75em;
         margin: 1.6em 0 .5em 0;
-        font-size: 1.65em;
         width: 100%;
 
     }
