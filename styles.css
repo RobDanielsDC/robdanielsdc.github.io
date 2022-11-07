@@ -100,7 +100,7 @@ p {
 
 .main-content {
     position: relative;
-    padding: 2vh 0 0 0;
+    margin: 2vh 0 0 0;
 }
 
 
@@ -108,8 +108,8 @@ p {
 h1 {
     font-family: var(--ff-accent);
     font-weight: 500;
-    font-size: 5.5rem;
-    font-size: clamp(5.5rem, 10vw, 10.5rem);
+    font-size: 5rem;
+    font-size: clamp(5rem, 10vw, 10.5rem);
     line-height: .75;
 
 }
@@ -125,7 +125,7 @@ p {
 
 .hero-p {
     margin: 1.2em 0;
-    font-size: 1.55rem;
+    font-size: 1.4rem;
     width: 92%;
 }
 
