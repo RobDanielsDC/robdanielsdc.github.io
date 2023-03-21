@@ -26,95 +26,57 @@ font-weight: 500 600 700
     font-size: 16px;
 }
 
-body, h1, p, img, a {
+body, h1, h2, h3, p, img, a {
     margin: 0;
     padding: 0;
 }
 
 /* --------- NAV --------- */
 
-.main-logo {
-    width: 1.5rem;
-    margin-bottom: .5rem;
+section, nav {
+    max-width: 1440px;
+    padding: 2rem 2rem 0 2rem;
+    margin: auto;
 }
 
-.nav-title {
-    font-family: acumin-pro-condensed, sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.nav-title b {
-    font-weight: 800;
-}
 
 nav {
-    position: fixed;
-    right: 0;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    height: 100vh;
-    width: 15vw;
-    z-index: 69; /* nice */
 }
 
-.nav-item {
-    display: flex;
-    gap: .4rem;
-    justify-content: space-between;
-    align-items: center;
-    writing-mode: vertical-lr;
-    padding: 2.5rem 0;
-
-
-}
-
-.lessgap {
-    gap: .1rem;
-}
-
-a{
+a {
     color: var(--black);
     text-decoration: none;
 }
 
-a div {
-    border: 1px solid #000;
-    border-radius: 9001px;
-    padding: .2em;
-}
-
-
-.social-icon {
-    width: 1.5rem;
-}
-
 .contact-btn {
-    padding: 1.75rem .4rem;
-    writing-mode: vertical-lr;
-    font-weight: 600;
-    font-size: .9rem;
-
+    border: 1px solid var(--black); 
+    border-radius: .65rem;
+    padding: .4rem 1.5rem .5rem 1.5rem;
 }
-
-
-
 
 /* --------- MAIN --------- */
 
-section {
-    padding-left: 5vw;
-    padding-right: 15vw;
-}
+
 
 h1 {
-    padding-top: 6rem;
-    padding-bottom: 1rem;
     font-family: lust-text, serif;
     font-weight: 400;
-    font-size: 2.65rem;
+    font-size: 2.45rem;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 1rem;
+    padding-top: .75rem;
+
+}
+
+h3 {
+    font-family: lust-text, serif;
+    font-weight: 400;
+    font-size: 2.45rem;
     line-height: 1;
 }
 
@@ -124,41 +86,107 @@ p {
     line-height: 1.35;
 }
 
-
-.hero-bg {
-    background-image: url("images/biggradientbg-mobile.svg");
-    height: 100vh;
-    width: 100vw;
-    background-position: 87% 62%;
-    background-repeat: no-repeat;
-    background-size: 345%;
-    filter: blur(15px);
-    pointer-events: none;
-}
-
 .hero-content {
-    position: absolute;
-    top: 0px;
-    z-index: 2;
+    margin-top:1.4rem;
+}
 
+/* .wheel-container {
+    position: relative;
 
 }
 
-.hero-fg {
-    background-image: url("images/lilgradientbg.svg");
-    height: 100vh;
-    width: 100vw;
-    background-position: -20% -22%;
+.wheel, .arrow {
+    position: absolute;
+    right: 0;
+    
+    
+} */
+
+.niche-block {
+    margin-top: 4rem;
+}
+
+.niche-container {
+    display: flex;
+    gap: .5rem;
+    padding-top: .5rem;
+}
+
+.niche-box {
+    background-color: var(--green);
+    border-radius: 9001rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 5;
+    font-weight: 600;
+
+}
+
+.niche-box p {
+    font-size: .65rem;
+    margin-top: 0;
+    padding: .5rem 0;
+
+}
+
+.client-block {
+    margin-top: 2.5rem;
+}
+
+.client-container {
+    display: flex;
+    gap: 1rem;
+    padding-top: .5rem;
+    overflow: hidden;
+}
+
+.client-logo {
+    width: 4.5rem;
+}
+
+.case-study-img {
+    height: 14rem;
+    background-color: var(--green);
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: 4;
-    opacity: 90%;
-    mix-blend-mode: lighten;
-    filter: blur(10px);
-    pointer-events: none;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.img-elevate {
+    background-image: url("https://cdn.dribbble.com/userupload/3078149/file/original-fa2390c4175085907a8f919fcc6c31ab.jpg?compress=1&resize=2521x1478");
+}
+
+.img-wasaga {
+    background-image: url("https://cdn.dribbble.com/userupload/3078156/file/original-d2789f1bdaf9b86a8cb91e3cd918a656.jpeg?compress=1&resize=1504x1003");
+}
+
+.img-fe {
+    background-image: url("https://cdn.dribbble.com/userupload/3002684/file/original-14cc056502284f0b7aafe2b6cab7d556.png?compress=1&resize=1504x792&vertical=center");
+}
+
+.img-vgs {
+    background-image: url("https://cdn.dribbble.com/userupload/2995649/file/original-f2cfc9523a0ddcd78c758ff0eb79123c.jpg?compress=1&resize=1504x918&vertical=center");
+}
+
+.case-study-text {
+    margin-bottom: 3.5rem;
+}
+
+.available-section {
+    text-align: center;
+    margin: 8rem 0;
+}
+
+.socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 a:hover {
-    filter: blur(3px);
-    transition: filter .3s;
+    filter: blur(3.5px);
+    transition: filter .5s;
 }
 
