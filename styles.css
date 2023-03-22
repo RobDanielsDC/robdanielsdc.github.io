@@ -57,6 +57,10 @@ a {
     width: max-content;
 }
 
+.main-logo {
+    filter: drop-shadow(0 0 30px var(--white))
+}
+
 /* --------- MAIN --------- */
 
 
@@ -143,9 +147,12 @@ p {
     padding-top: .5rem;
 }
 
-.marquee {
-    animation: marquee 13s linear infinite;
+@media (max-width: 768px) {
+    .marquee {
+        animation: marquee 13s linear infinite;
+    }
 }
+
 
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
@@ -205,13 +212,104 @@ a:hover {
 .gradient-bg {
     background-image: url("images/lilgradientbg.svg");
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--white);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     filter: blur(20px);
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0; 
+    right: 0; 
     z-index: -1;
+    margin: auto;
+    max-width: 1440px;
+
 }
+
+
+
+@media (min-width: 768px) {
+
+    .hero-content {
+        margin-top: 6rem;
+    }
+
+    .hero-text {
+        width: 56%;
+        margin-bottom: 6rem;
+
+    }
+
+    h1 {
+        /* font-family: lust-text, serif;
+        font-weight: 400; */
+        font-size: 5.45rem;
+        /* line-height: 1; */
+    }
+    
+    h2 {
+        font-size: 1rem;
+        /* padding-top: .75rem; */
+    
+    }
+    
+    /* h3 {
+        /* font-family: lust-text, serif;
+        font-weight: 400; 
+        /* font-size: 2.45rem;
+        line-height: 1; 
+    } */
+    
+    p {
+        font-size: 1.3rem;
+        margin-top: .5rem;
+        line-height: 1.35;
+        width: 55%; 
+    }
+
+    .gradient-bg {
+        background-image: url("images/biggradientbg.svg");
+        filter: blur(70px);
+
+    }
+
+    .socials-container {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0; 
+        z-index: 1;
+        margin: 2rem auto;
+    }
+
+    .niche-box {
+        white-space: nowrap; 
+    }
+
+    .niche-box p {
+        width: 100%;
+    }
+
+    .weird-flex-bro {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .case-study-img {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .case-study-text {
+        margin-top: 3em;
+    }
+
+    .available-section {
+        width: 56%;
+    }
+
+}
+
