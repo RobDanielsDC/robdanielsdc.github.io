@@ -151,6 +151,10 @@ p {
     .marquee {
         animation: marquee 13s linear infinite;
     }
+
+    .nav-title {
+        display: none;
+    }
 }
 
 
@@ -193,6 +197,10 @@ p {
     margin-bottom: 3.5rem;
 }
 
+.available {
+    position: relative;
+}
+
 .available-section {
     /* text-align: center; */
     margin: 12rem auto;
@@ -228,6 +236,9 @@ a:hover {
 
 }
 
+.bottompage {
+    bottom: 0;
+}
 
 
 @media (min-width: 768px) {
@@ -323,6 +334,10 @@ a:hover {
 
     .available {
         width: 750px;
+        position: relative;
+        
+
+
     }
 
     .bottoms {
@@ -336,13 +351,25 @@ a:hover {
 
 
 
+    .nav-title {
+        display: flex;
+        flex-direction: column;
+        width: 25rem;
+    }
 
 
+    .nav-title p {
+        font-size: .8rem;
+        margin: 0;
+        padding-left: .5rem;
+        line-height: 1.2;
+    }
 
-
-
-
-
+    .logo-lockup {
+        display: flex;
+        flex-direction: row;
+    }
+    
 
 
 }
