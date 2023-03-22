@@ -54,6 +54,7 @@ a {
     border: 1px solid var(--black); 
     border-radius: .65rem;
     padding: .4rem 1.5rem .5rem 1.5rem;
+    width: max-content;
 }
 
 /* --------- MAIN --------- */
@@ -81,9 +82,10 @@ h3 {
 }
 
 p {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     margin-top: .7rem;
     line-height: 1.35;
+    width: 90%;
 }
 
 .hero-content {
@@ -108,7 +110,7 @@ p {
 
 .niche-container {
     display: flex;
-    gap: .5rem;
+    gap: .7rem;
     padding-top: .5rem;
 }
 
@@ -118,7 +120,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-grow: 5;
     font-weight: 600;
 
 }
@@ -126,20 +127,31 @@ p {
 .niche-box p {
     font-size: .65rem;
     margin-top: 0;
-    padding: .5rem 0;
+    padding: .3rem 1.1rem;
 
 }
 
 .client-block {
     margin-top: 2.5rem;
+    overflow: hidden;
+
 }
 
 .client-container {
     display: flex;
     gap: 1rem;
     padding-top: .5rem;
-    overflow: hidden;
 }
+
+.marquee {
+    animation: marquee 13s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
 
 .client-logo {
     width: 4.5rem;
@@ -175,8 +187,8 @@ p {
 }
 
 .available-section {
-    text-align: center;
-    margin: 8rem 0;
+    /* text-align: center; */
+    margin: 12rem auto;
 }
 
 .socials-container {
@@ -186,7 +198,20 @@ p {
 }
 
 a:hover {
-    filter: blur(3.5px);
-    transition: filter .5s;
+    filter: blur(3px);
+    transition: filter .3s;
 }
 
+.gradient-bg {
+    background-image: url("images/lilgradientbg.svg");
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(20px);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}

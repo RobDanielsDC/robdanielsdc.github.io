@@ -1,13 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 896 1058" style="enable-background:new 0 0 896 1058;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#47FF9B;}
-</style>
-<g>
-	<path class="st0" d="M334.1,386.2c174.7,93.1-70,264-84,394.9c-38.3,173.5,54.3,396.3,54,198.5c-0.6-363.6,602-373.5,590.9-574.7
-		c-11.2-202.9-297.4,144.2-324.4-0.5c-27-144.7,138.1-131.7,129.7-268.7C691.8-1.4,590.6,1.1,528.8,51.4
-		c-61.8,50.3-117.1,176.4-226.2-2.3C193.6-129.5,27,233.8,3.6,306.4C-19.8,379,115.7,269.8,334.1,386.2z"/>
+<svg width="332" height="767" viewBox="0 0 332 767" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_596_468" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="332" height="767">
+<rect width="332" height="767" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_596_468)">
+<path d="M516.757 118.653C240.194 244.96 504.865 360.5 497.865 417C711.141 728.264 -53.1347 744.5 283.365 566C602.758 396.575 -90.6205 422.5 -98.6347 377C-129.635 201 465.86 633.942 320.879 167.997C222.512 -148.142 -230.541 247.565 -197.634 -94.4989C-159.634 -489.501 670.366 48.4994 516.757 118.653Z" fill="#47FF9B"/>
 </g>
 </svg>
