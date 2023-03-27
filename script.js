@@ -12,4 +12,3 @@ if (breakpoint.matches) {
     console.log('This code will only execute on screens smaller than 768 pixels');
 }
 
-
