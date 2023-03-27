@@ -217,8 +217,10 @@ p {
 
 .socials-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
+    max-width: 1440px;
+    padding: .5rem 2rem 1rem 2rem;
 }
 
 
@@ -246,8 +248,26 @@ p {
     bottom: 0;
 }
 
+footer {
+    border-top: 1px solid var(--black); 
+    width: 75vw;
+    max-width: 1440px;
+    padding: .5rem 2rem 1rem 2rem;
+    margin: auto;
+
+}
+
+footer p {
+    font-size: .9rem;
+}
+
 
 @media (min-width: 768px) {
+
+    footer {
+        display:flex;
+        justify-content: space-between;
+    }
 
     .hero-content {
         margin-top: 6rem;
