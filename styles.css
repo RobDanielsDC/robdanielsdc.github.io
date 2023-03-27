@@ -389,6 +389,13 @@ footer p {
         flex-direction: row;
     }
     
-
+    .socials-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        max-width: 1440px;
+        padding: 1rem 0rem 1rem 2rem;
+        margin: .5rem auto;
+    }
 
 }
