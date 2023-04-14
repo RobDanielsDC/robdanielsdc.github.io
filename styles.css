@@ -41,6 +41,12 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
 /* Make images easier to work with */
 img,
 picture,
@@ -117,7 +123,7 @@ body {
   background-color: var(--light-color);
 }
 
-section, header, footer {
+section, header, footer, nav {
   margin: auto;
   padding: 1rem;
   max-width: 1440px;
@@ -128,7 +134,7 @@ h1, h2, p {
 }
 
 h1, h2 {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 400;
 }
   
@@ -136,6 +142,34 @@ p {
   font-size: 1rem;
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-color);
+  border-bottom: 1px solid var(--dark-color);
+  padding: 1rem;
+  z-index: 420;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-icon {
+  width: 1.6rem;
+}
+
+/* .birds-fly {
+  justify-content: right;
+} */
+
+header {
+  height: 90vh;
+  height: 90svh;
+  display: flex;
+
+  align-items: center;
+}
 
 
 
