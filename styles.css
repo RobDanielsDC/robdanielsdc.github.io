@@ -75,8 +75,9 @@ svg {
 :root {
   --dark-color: #0C2036;
   --light-color: #FCFFFF;
-  --ff-serif: "lust-text", serif; ;
-  --ff-sans: "owners-text", sans-serif;;
+  --ff-serif: "lust-text", serif;
+  --ff-sans: "owners-text", sans-serif;
+  --ff-sans-heading: "owners", sans-serif;
 
 
   /* 
@@ -96,14 +97,14 @@ svg {
 
   font-family: lust-text, serif;
   font-weight: 700;
-  font-style: normal;
+  font-style: italic;
 
   font-family: owners-text, sans-serif;
   font-weight: 400;
   font-style: normal;
 
   font-family: owners-text, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
 
   font-family: owners, sans-serif;
@@ -113,11 +114,11 @@ svg {
 }
 
 html {
-  font-size: clamp(18px, 2vw + 1px, 28px);
+  font-size: clamp(18px, 4vw + 1px, 36px);
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--ff-sans);
   font-weight: 400;
   color: var(--dark-color);
   background-color: var(--light-color);
@@ -125,21 +126,52 @@ body {
 
 section, header, footer, nav {
   margin: auto;
-  padding: 1rem;
-  max-width: 1440px;
+  padding: .6rem;
+}
+
+
+/* Set up flexbox layout */
+.add-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Set up column layout for horizontal screens */
+@media (min-width: 768px) {
+  .add-flex > * {
+    width: calc(50% - 10px);
+  }
+}
+
+/* Set up single column layout for vertical screens */
+@media (max-width: 767px) {
+  .add-flex > * {
+    width: 100%;
+  }
 }
 
 h1, h2, p {
   margin: 0;
 }
 
-h1, h2 {
-  font-size: 1.4rem;
+h1 {
+  font-family: var(--ff-sans-heading);
+  font-size: 1.6rem;
   font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.1;
 }
   
 p {
+  font-family: var(--ff-serif);
   font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.header-container {
+  width: min(100%, 900px)
 }
 
 nav {
@@ -149,25 +181,40 @@ nav {
   right: 0;
   background-color: var(--light-color);
   border-bottom: 1px solid var(--dark-color);
-  padding: 1rem;
   z-index: 420;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+}
+
+.nav-name {
+  font-family: var(--ff-sans-heading);
+  font-size: .9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .nav-icon {
   width: 1.6rem;
 }
 
-/* .birds-fly {
-  justify-content: right;
-} */
+.nav-cta {
+  font-family: var(--ff-serif);
+  font-size: .7rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+.birds-fly {
+  width: 8rem;
+  margin-left: auto;
+}
 
 header {
   height: 90vh;
   height: 90svh;
   display: flex;
-
   align-items: center;
 }
 
