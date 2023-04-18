@@ -1,25 +1,29 @@
-const section = document.querySelector('.text-scroll');
-const leftLine = document.querySelector('.left');
-const rightLine = document.querySelector('.right');
-const sectionTop = section.offsetTop;
-const sectionHeight = section.offsetHeight;
-const scrollSpeed = 1; /* adjust the scroll speed as needed */
+// Get the container element
+const container = document.querySelector('.services-lrg');
 
-window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset;
-  const scrollBottom = scrollTop + window.innerHeight;
+// Calculate the distance of the container from the top of the document
+const containerTop = container.getBoundingClientRect().top;
 
-  /* check if the section is in view */
-  if (scrollBottom > sectionTop && scrollTop < sectionTop + sectionHeight) {
-    /* calculate the scroll distance from the top of the section */
-    const scrollDistance = (scrollBottom - sectionTop) / sectionHeight;
-    
-    /* update the transform property of the lines of text */
-    leftLine.style.transform = `translateX(${scrollDistance * 100}%)`;
-    rightLine.style.transform = `translateX(-${scrollDistance * 100}%)`;
-  } else {
-    /* reset the transform property of the lines of text */
-    leftLine.style.transform = 'translateX(-100%)';
-    rightLine.style.transform = 'translateX(100%)';
+// Calculate the height of the viewport
+const windowHeight = window.innerHeight;
+
+// Function to check if the container is in the viewport
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (windowHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Function to handle scroll events
+function handleScroll() {
+  if (isElementInViewport(container)) {
+    container.classList.add('animate');
   }
-});
+}
+
+// Add a scroll event listener to the window
+window.addEventListener('scroll', handleScroll);
