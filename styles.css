@@ -199,14 +199,15 @@ nav {
 }
 
 .birds-fly {
-  width: 5rem;
+  width: 17rem;
   padding-top: 2.5rem;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 740px) {
   .birds-fly {
     margin-left: auto;
     padding-top: 0;
+    width: 12.5rem;
   }
 }
 
@@ -326,7 +327,7 @@ p {
 }
 
 b {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @media (min-width: 700px) {
@@ -359,7 +360,8 @@ a:hover {
   grid-template-columns: 10% 60%;
   grid-template-rows: auto auto; /* Added second row */
   grid-gap: 2rem;
-  margin: 4rem auto;
+  margin: 4rem;
+  justify-content: end;
 }
 
 .col-30 {
@@ -375,7 +377,7 @@ a:hover {
 }
 
 .bolded {
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: -.2rem;
 }
 
@@ -390,9 +392,12 @@ a:hover {
   text-align: center;
 }
 
+
+
 @media (max-width: 700px) {
   .testimonials {
     display: block;
+    margin: 4rem auto;
   }
 
   .col-30 {
@@ -414,3 +419,100 @@ a:hover {
   
 }
 
+.footer-container {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-radius: .8rem .8rem 0 0;
+  padding: 0 0;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+}
+
+.footer-item a {
+  width: 1rem;
+}
+
+.footer-item p {
+  font-size: .5rem;
+}
+
+.foot-bird {
+  width: 7rem;
+  margin-top: 1rem;
+}
+
+.foot-pad {
+  padding: 0 .6rem;
+}
+
+@media (max-width: 700px) {
+  .footer-item {
+    flex-direction: column;
+  }
+
+  .margin-auto {
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .footer-item a {
+    width: 1.5rem;
+  }
+
+  .foot-bird {
+    margin: 1rem 0;
+    width: 8rem;
+  }
+
+  .foot-bird-container {
+    margin-right: auto;
+  }
+
+  .footer-item p {
+    margin-bottom: 1rem;
+  }
+}
+
+.exp-container {
+  margin: 4rem auto;
+  padding: 4rem;
+  background-image: url(images/exp-bg-drk.jpg);
+  border-radius: .8rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+}
+
+.exp-container h1 {
+  font-family: var(--ff-serif);
+  width: 24rem;
+  margin: 2rem auto;
+}
+
+.btn-lite {
+  border: 1px solid var(--light-color);
+  border-radius: 42069px;
+  width: 30%;
+  padding: 1rem 2rem;
+  margin: auto;
+}
+
+@media (max-width: 700px) {
+  .exp-container {
+    padding: 10rem 0;
+    margin: 3rem .6rem;
+  }
+  .exp-container h1 {
+    width: 100%;
+  }
+
+  .btn-lite {
+    width: 80%;
+    margin: auto;
+  }
+}
