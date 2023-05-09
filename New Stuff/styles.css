@@ -1,0 +1,527 @@
+/* ------ RESET ------ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --dark-color: #0C2036;
+  --light-color: #FCFFFF;
+  --ff-serif: "lust-text", serif;
+  --ff-sans: "owners-text", sans-serif;
+  --ff-sans-heading: "owners", sans-serif;
+
+  /* 
+  TYPE
+
+  font-family: lust-text, serif;
+  font-weight: 500;
+  font-style: normal;
+
+  font-family: lust-text, serif;
+  font-weight: 500;
+  font-style: italic;
+
+  font-family: lust-text, serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-family: lust-text, serif;
+  font-weight: 700;
+  font-style: italic;
+
+  font-family: owners-text, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-family: owners-text, sans-serif;
+  font-weight: 700;
+  font-style: bold;
+
+  font-family: owners, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  */
+}
+
+html {
+  font-size: clamp(20px, 3vw + 1px, 34px);
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-weight: 400;
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
+section, header, footer, nav {
+  width: 100vw;
+  max-width: 100%;
+}
+
+.main-container {
+  max-width: 1800px;
+  margin: auto;
+  padding: .6rem;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .2rem .6rem .2rem .6rem ;
+}
+
+/* @media (min-width: 700px) {
+  .nav-container {
+  padding: .2rem .6rem .2rem .6rem ;
+  }
+}  */
+
+h1, h2, p {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--ff-sans-heading);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+  
+.header-ear {
+  font-family: var(--ff-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.header-container {
+  width: min(100%, 900px);
+  margin-top: 4rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-color);
+  border-bottom: 1px solid var(--dark-color);
+  z-index: 420;
+}
+
+.nav-name {
+  font-family: var(--ff-sans-heading);
+  font-size: .8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.nav-icon {
+  width: 1.3rem;
+}
+
+.nav-cta {
+  font-family: var(--ff-serif);
+  font-size: .6rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.birds-fly {
+  width: 17rem;
+  padding-top: 2.5rem;
+}
+
+@media (min-width: 740px) {
+  .birds-fly {
+    margin-left: auto;
+    padding-top: 0;
+    width: 12.5rem;
+  }
+}
+
+header {
+  padding-top: 5rem;
+}
+
+.brands-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.brands-logo {
+  width: 25%;
+  padding: .25rem .75rem;
+}
+
+.brand-flex {
+  margin-top: 6.5rem;
+  opacity: 50%;
+}
+
+@media (min-width: 700px) {
+  .brand-flex {
+    display: flex;
+  }
+  
+  .brands-container {
+    align-items: space-between;
+  }
+
+  .brands-logo {
+    width: 25%;
+    margin: auto;
+    max-width: 4rem;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: auto;
+
+}
+
+.work-img {
+  border-radius: .8rem;
+}
+
+@media (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .work-img-container {
+    width: 50%;
+  }
+
+  .work-img {
+    width: 100%;
+  }
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.services-lrg {
+  display: none;
+  overflow: hidden;
+}
+
+@media (min-width: 700px) {
+  .services {
+    display: none;
+  }
+
+  .services-lrg {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    flex-direction: column;
+    font-family: var(--ff-sans-heading);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 3rem;
+    line-height: 1.2;
+  }
+  /* 
+  .row-1 {
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+  }
+
+  .row-2 {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    white-space: nowrap;
+  } */
+
+}
+
+p {
+  font-size: .8rem;
+  margin-top: .5rem;
+  line-height: 1.2;
+}
+
+b {
+  font-weight: 500;
+}
+
+@media (min-width: 700px) {
+  p {
+    font-size: .6rem;
+  }
+}
+
+a:hover {
+  opacity: 50%;
+  transition: .2s;
+
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+}
+
+@media (min-width: 700px) {
+  .contact {
+    text-align: center;
+    /* flex-direction: column-reverse; */
+  }
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 10% 60%;
+  grid-template-rows: auto auto; /* Added second row */
+  grid-gap: 2rem;
+  margin: 4rem;
+  justify-content: end;
+}
+
+.col-30 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .5rem;
+}
+
+.col-70 {
+  text-indent: -.2rem;
+  font-size: .8rem;
+}
+
+.bolded {
+  font-weight: 500;
+  margin-bottom: -.2rem;
+}
+
+.testimonial-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 42069px;
+  margin-bottom: .1rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+
+
+@media (max-width: 700px) {
+  .testimonials {
+    display: block;
+    margin: 4rem auto;
+  }
+
+  .col-30 {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin: 2rem auto .5rem auto;
+    font-size: .7rem;
+
+  }
+
+  .testimonial-text {
+    margin-left: .4rem;
+  }
+
+  .centered {
+    text-align: left;
+  }
+  
+}
+
+.footer-container {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-radius: .8rem .8rem 0 0;
+  padding: 0 0;
+}
+
+.footer-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+}
+
+.footer-item a {
+  width: 1rem;
+}
+
+.footer-item p {
+  font-size: .5rem;
+}
+
+.foot-bird {
+  width: 7rem;
+  margin-top: 1rem;
+}
+
+.foot-pad {
+  padding: 0 .6rem;
+}
+
+@media (max-width: 700px) {
+  .footer-item {
+    flex-direction: column;
+  }
+
+  .margin-auto {
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .footer-item a {
+    width: 1.5rem;
+  }
+
+  .foot-bird {
+    margin: 1rem 0;
+    width: 8rem;
+  }
+
+  .foot-bird-container {
+    margin-right: auto;
+  }
+
+  .footer-item p {
+    margin-bottom: 1rem;
+  }
+}
+
+.exp-container {
+  margin: 4rem auto;
+  padding: 4rem;
+  background-image: url(images/exp-bg-drk.jpg);
+  border-radius: .8rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+}
+
+.exp-container h1 {
+  font-family: var(--ff-serif);
+  width: 24rem;
+  margin: 2rem auto;
+}
+
+.btn-lite {
+  border: 1px solid var(--light-color);
+  border-radius: 42069px;
+  width: 45%;
+  padding: 1rem 2rem;
+  margin: auto;
+}
+
+@media (min-width: 700px) {
+  .exp-container {
+    box-sizing: border-box;
+    border: .6rem solid var(--light-color);
+    border-radius: 1.4rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .exp-container {
+    padding: 10rem 0;
+    margin: 3rem .6rem;
+  }
+  .exp-container h1 {
+    width: 100%;
+  }
+
+  .btn-lite {
+    width: 80%;
+    margin: auto;
+  }
+}
