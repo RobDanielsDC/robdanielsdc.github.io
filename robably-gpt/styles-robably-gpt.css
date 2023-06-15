@@ -1,0 +1,114 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+ol,
+li,
+blockquote,
+strong,
+em {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+:root {
+  --dark-color: #000; /* Black */
+  --light-color: #C4E1E1; /* Off-white */
+  --accent-color: #1CFAC4; /* Green */
+}
+
+body {
+  background-color: var(--dark-color);
+}
+
+/* section {
+
+} */
+
+.container {
+  padding: 1rem;
+  height: 100%;
+}
+
+h1, p, .btn, .socials {
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-family: chapman-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--light-color);
+  font-size: 3.7rem;
+  line-height: .9;
+}
+
+p {
+  font-family: owners, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--light-color);
+  font-size: 1.95rem;
+  letter-spacing: 1px;
+}
+
+.btn {
+  font-family: owners, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--dark-color);
+  background-color: var(--accent-color);
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1.2rem;
+  padding-top: 4rem;
+}
+
+
+a {
+  text-decoration: none;
+
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-items {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+.hero {
+  height: 80vh;
+  min-height: 800px;
+  background-image: url("images-robably-gpt/northernlights-bg.jpg");
+  background-size: cover;
+  background-position: 70% 100%; /* 50% horizontal, 25% vertical */
+}
