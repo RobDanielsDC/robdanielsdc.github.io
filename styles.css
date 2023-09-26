@@ -144,6 +144,13 @@ header, section, footer {
   margin: 60px 0 100px 0;
 }
 
+.mobile-image {
+  display: block; /* Display the mobile image by default */
+}
+
+.desktop-image {
+  display: none; /* Hide the desktop image by default */
+}
 
 /* .overlay {
   position: absolute;
@@ -181,6 +188,14 @@ header, section, footer {
   .social-div {
     display: flex;
     flex-direction: row;  
+  }
+
+  .mobile-image {
+    display: none; /* Hide the mobile image on desktop */
+  }
+  
+  .desktop-image {
+    display: block; /* Display the desktop image on desktop */
   }
   
 }
