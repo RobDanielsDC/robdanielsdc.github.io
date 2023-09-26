@@ -17,6 +17,7 @@ ol,
 li,
 blockquote,
 strong,
+.bg-img-container,
 em {
   margin: 0;
   padding: 0;
@@ -57,6 +58,15 @@ p {
 a {
   text-decoration: none;
   color: var(--light-color);
+}
+
+h1 {
+  font-family: chapman-condensed, Times, serif;
+  font-size: 80px;
+  font-weight: 400;
+  font-style: normal;
+  max-width: 600px;
+  line-height: .8;
 }
 
 .button {
@@ -106,13 +116,11 @@ header, section, footer {
 
 .social-div {
   display: block;
-  align-items: center;
-  flex-direction: column;  
 }
 
 
 .grid-container {
-  margin-top: 250px;
+  margin-top: 200px;
   display: block;
   width: 100%;
 }
@@ -133,6 +141,7 @@ header, section, footer {
 .grid-item {
   margin-bottom: 20px;
   position: relative;
+  background-color: var(--black-color);
 }
 
 
@@ -152,21 +161,35 @@ header, section, footer {
   display: none; /* Hide the desktop image by default */
 }
 
-/* .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  mix-blend-mode: color;
-  opacity: 1;
-  background-color: rgba(var(--black-color));  Optional: Add a background color with opacity 
-  transition: opacity 0.3s;
+
+.hero-p {
+  margin: 35px 0 20px 0;
 }
 
-.image-container:hover .overlay {
-  opacity: 0; 
-} */
+.bg-img-container {
+  position: absolute; 
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+  z-index: -420;
+  opacity: 65%;
+}
+
+
+.top-right-image {
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  width: 80%; 
+  height: auto; 
+}
+
+
+
+
+
+
+
 
 
 
@@ -197,7 +220,19 @@ header, section, footer {
   .desktop-image {
     display: block; /* Display the desktop image on desktop */
   }
-  
+
+  h1 {
+    font-size: 100px;
+    line-height: .8;
+  }
+
+  .top-right-image {
+    width: 50%; 
+  }
+
+  .button {
+    width: fit-content;
+  }
 }
 
 
