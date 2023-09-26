@@ -185,7 +185,10 @@ header, section, footer {
 }
 
 
-
+.icon-between {
+  display: flex;
+  justify-content: space-between;
+}
 
 
 
@@ -200,6 +203,10 @@ header, section, footer {
     grid-template-columns: 50% 50%;
     /* grid-template-columns: 56% 43%; */
     gap: 20px;
+  }
+
+  .icon-between {
+    display: block;
   }
 
   .grid-container {
