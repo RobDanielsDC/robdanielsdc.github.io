@@ -78,14 +78,14 @@ h1 {
   margin-right: 10px;
 }
 
-header a, footer a {
+header a, footer a, .hero a {
   margin-right: 10px;
   text-decoration: none;
   opacity: 1;
   transition: opacity 0.3s;
 }
 
-header a:hover, footer a:hover {
+header a:hover, footer a:hover, .hero a:hover  {
   opacity: 0.5;
 }
 
