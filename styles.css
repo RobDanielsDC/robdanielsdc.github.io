@@ -218,6 +218,7 @@ header, section, footer {
   .social-div {
     display: flex;
     flex-direction: row;  
+    align-items: center;
   }
 
   .mobile-image {
