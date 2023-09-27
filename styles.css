@@ -32,6 +32,12 @@ em {
   --light-color: #C4E1E1; /* Off-white */
   --accent-color: #1CFAC4; /* Green */
 }
+
+::selection {
+  background-color: var(--accent-color); /* Change this to your desired highlight color */
+  color: var(--black-color); /* Change this to your desired text color within the selection */
+}
+
 /* 
 font-family: 'Instrument Sans', sans-serif;
 font-weight: 400; regs
